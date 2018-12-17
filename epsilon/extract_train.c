@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    FILE* fp = fopen("epsilon_normalized.t", "r");
-    FILE* fl = fopen("testlabel", "w");
-    FILE* fd = fopen("testdata", "w");
+    FILE* fp = fopen("epsilon_normalized", "r");
+    FILE* fl = fopen("trainlabel", "w");
+    FILE* fd = fopen("traindata", "w");
     int l;
-    for (int i = 0; i < 100000; ++i) {
+    for (int i = 0; i < 400000; ++i) {
         fscanf(fp, "%d", &l);
         fwrite(&l, sizeof(int), 1, fl);
         for (int j = 0; j < 2000; ++j) {

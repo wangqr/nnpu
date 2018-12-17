@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    FILE* fp = fopen("epsilon_normalized", "r");
-    FILE* fl = fopen("trainlabel", "w");
-    FILE* fd = fopen("traindata", "w");
+    FILE* fp = fopen("epsilon_normalized.t", "r");
+    FILE* fl = fopen("testlabel", "w");
+    FILE* fd = fopen("testdata", "w");
     int l;
     for (int i = 0; i < 100000; ++i) {
         fscanf(fp, "%d", &l);
